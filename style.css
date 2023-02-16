@@ -1,0 +1,34 @@
+* {
+    text-align: center;
+    background-color: #ffea00;
+    font-family: 'VT323', monospace;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.buttons button {
+    border: none;
+    background-color: #ffea00;
+    align-items: center;
+    justify-content: center;
+    margin: 0vh 4vh;
+}
+
+.announcements, .complete {
+    font-size: 32px;
+    margin: 4vh;
+}
+
+.score {
+    margin: 4vh;
+}
+
+.play button {
+    visibility: hidden;
+    background-color: white;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 5px;
+}

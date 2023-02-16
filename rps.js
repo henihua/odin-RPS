@@ -8,8 +8,19 @@ const paper = document.querySelector('#paper');
 const scissor = document.querySelector('#scissors');
 const all = document.querySelector('.everything');
 const buttons = document.querySelector('.buttons');
-
 const results = document.querySelector('.announcements');
+const playAgainButton = document.querySelector('.again');
+
+let losePic = document.createElement('img');
+losePic.setAttribute("src", "img/ICANT.png");
+losePic.setAttribute("height", "100px");
+losePic.setAttribute("width", "100px");
+
+let winPic = document.createElement('img');
+winPic.setAttribute("src", "img/pog.png");
+winPic.setAttribute("height", "100px");
+winPic.setAttribute("width", "100px");
+
 
 rock.addEventListener('click', () => {
     playerSelection = "Rock";
@@ -48,12 +59,22 @@ function playRound(computerSelection, playerSelection) {
 function win(computerScore, playerScore) {
     if(playerScore === 5) {
         all.removeChild(buttons);
+        all.appendChild(winPic)
+        playAgainButton.style.visibility = 'visible';
         return "You won against the Computer!!"
     } else if (computerScore === 5) {
         all.removeChild(buttons);
+        all.appendChild(losePic);
+        playAgainButton.style.visibility = 'visible';
         return "You lost against the Computer."
     } else 
         return "Next Round!"
+}
+
+function reset() {
+    playAgainButton.addEventListener('click', () => {
+        window.location.reload();
+    })
 }
 
 function game() {
@@ -79,5 +100,6 @@ function game() {
 
     const over = document.querySelector('.complete');
     over.textContent = `${win(computerScore, playerScore)}`;
-}
 
+    reset();
+}
