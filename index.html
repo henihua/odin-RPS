@@ -7,11 +7,21 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <div class="everything">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="buttons">
+            <button id="rock"><img src="./img/rock.png" alt="rock" width="100px" height="100px"></button>
+            <button id="paper"><img src="./img/paper.png" alt="paper" width="100px" height="100px"></button>
+            <button id="scissors"><img src="./img/scissors.png" alt="scissors" width="100px" height="100px"></button>
+        </div>
+        <div class="complete"></div>
+
+        <div class="announcements">
+            <div class="resultOfRound"></div>
+            <div class="winner"></div>
+            <div class="score"></div>
+        </div>
+    </div>
     <script src="rps.js"></script>
-    <script>
-        const playerSelection = "rock"
-        const computerSelection = gameComputerChoice()
-        console.log(playRound(computerSelection,playerSelection))
-    </script>
 </body>
 </html>
