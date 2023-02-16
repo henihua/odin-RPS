@@ -6,7 +6,7 @@ let playerSelection;
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissor = document.querySelector('#scissors');
-const all = document.querySelector('.everything');
+const all = document.querySelector('.main');
 const buttons = document.querySelector('.buttons');
 const results = document.querySelector('.announcements');
 const playAgainButton = document.querySelector('.again');
